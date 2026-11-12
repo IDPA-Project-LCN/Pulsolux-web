@@ -177,8 +177,8 @@ function HowItWorks() {
       <p className="max-w-2xl text-lg text-zinc-300">
         Pulsolux misst über Kamera und Licht, wie sich die Blutmenge in deinem Finger mit jedem
         Herzschlag ändert. Dieses Verfahren heisst Photoplethysmographie (PPG). Aus dem
-        regelmässigen Hell-Dunkel-Muster berechnet die App die Herzfrequenz. Ein Zusatzgerät
-        brauchst du nicht.
+        regelmässigen Hell-Dunkel-Muster berechnet die App die Herzfrequenz. Im Modus Flash
+        brauchst du kein Zusatzgerät.
       </p>
       <div className="mt-10 grid gap-4 sm:grid-cols-3">
         {steps.map((s, i) => (
