@@ -220,11 +220,13 @@ function Phone({ src, label, mock }: (typeof SCREENSHOTS)[number]) {
   const [missing, setMissing] = useState(false)
   return (
     <figure className="w-48 shrink-0 snap-center sm:w-56">
-      <div className="aspect-[9/19.5] overflow-hidden rounded-[2rem] border-[6px] border-zinc-800 bg-black shadow-2xl">
+      {/* Rahmen im Format des Samsung S25 (1080 × 2340). Das Bild wird ganz gezeigt
+          (object-contain), freie Fläche oben/unten in der Hintergrundfarbe der App. */}
+      <div className="aspect-[1080/2340] overflow-hidden rounded-[2rem] border-[6px] border-zinc-800 bg-[#1c0f0d] shadow-2xl">
         {missing ? (
           <MockScreen kind={mock} />
         ) : (
-          <img src={src} alt={`Screenshot: ${label}`} loading="lazy" onError={() => setMissing(true)} className="h-full w-full object-cover" />
+          <img src={src} alt={`Screenshot: ${label}`} loading="lazy" onError={() => setMissing(true)} className="h-full w-full object-contain" />
         )}
       </div>
       <figcaption className="mt-3 text-center text-sm text-zinc-400">{label}</figcaption>
