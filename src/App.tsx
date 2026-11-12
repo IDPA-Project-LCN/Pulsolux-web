@@ -306,7 +306,7 @@ function InstallAndroid() {
       </ol>
       <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
         <DownloadButton large />
-        <span className="text-sm text-zinc-500">Version {APP_VERSION} vom {RELEASE_DATE}</span>
+        <span className="text-sm text-zinc-500">Version {APP_VERSION}, {RELEASE_DATE}</span>
       </div>
     </Section>
   )
